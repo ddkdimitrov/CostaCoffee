@@ -3,12 +3,7 @@ Basic demo project
 
 Public access to the project -> https://github.com/ddkdimitrov/CostaCoffee
 
-Couldnt receive access to the API you gave me and used other on development URL environment. There is default credentials that I hardcoded into the Login page.
-email: ddk.dimitrov@gmail.com
-pass: abv123
-
-
--- Goals:
+Goals:
 
 1. Trying following MVVM + C architect desigh pattern. 
 2. Trying practicing my skills using Coordinators + dependancy injections. 
@@ -31,17 +26,20 @@ For that example it was much easier to do that without Reactive. Need to invest 
 
 
 Warrning:
+
 1. In that short demo I didint make Token/password storing to Keychain. Basically I had 2 days to create the project. Working mainly on 6.09 and 8.09. Cus some ot the things were newer for me like (MVVM + C) and had some delay-time with it. Didnt want to make it just MVVM :) 
 2. I also didint add Error alerts for that short-term project.
 3. I could progress more the Unit testing, the point is clear but didint have a time to finish it. Mainly said: Unit testing allows us to check for foundamental methods that we use in the life cycle in the app and to prevent different kind erros if someone else tries to modify some method. 
 
 
--- File separation:
+File separation:
 
 1. I separated every kind files in different folder.
 In a big and complex project im gonna separate the files in other way for easier work as: One folder: (viewModel/viewcontroller/ApiService/cells/views) based on the screen that im working. 
 
+
 NOTES:
+
 1. I could extend the project more by using some Setup classes for styling the CSS of the app, texts and t.n.t
 2. I could make different Targets based on the API Version if we have Development/Production environment. 
 3. I could use open-closed solid principle to the classes that can be extendable in the future with a new futures. 
