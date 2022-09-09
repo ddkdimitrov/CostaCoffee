@@ -38,8 +38,8 @@ Warrning:
 
 -- File separation:
 
-1. Im separated every kind files in different folder.
-In a big and complex project im gonna separate the files in other way for easier work as: One folder: viewModel/viewcontroller/ApiService/cells/views based on the screen that im working. 
+1. I separated every kind files in different folder.
+In a big and complex project im gonna separate the files in other way for easier work as: One folder: (viewModel/viewcontroller/ApiService/cells/views) based on the screen that im working. 
 
 NOTES:
 1. I could extend the project more by using some Setup classes for styling the CSS of the app, texts and t.n.t
@@ -50,8 +50,9 @@ NOTES:
 
 
 
-Regardless of your conclusion, please give me feedback on how I did and if there is anything I need to improve. I also spent my time on it and it would be nice If I receive. Thanks! 
-I think there are and other things I could mentione, but in that stage, thats all. Thank you for your time and sorry for the spam! :) 
+Regardless of your conclusion, please give me a feedback on how I did and if there is something I need to improve.
+
+I think there are and other things I could mentione, but at that stage, thats all. Thank you for your time and sorry for the spam! :) 
 
 
 
