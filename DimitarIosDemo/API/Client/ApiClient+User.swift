@@ -37,5 +37,7 @@ extension ApiClient {
                 return nil
             }
         }
+        
+        //Adding new Operation client methods related with the User...
     }
 }

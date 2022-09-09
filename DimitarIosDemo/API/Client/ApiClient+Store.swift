@@ -37,5 +37,7 @@ extension ApiClient {
                  throw customErr
             }
         }
+        
+        //Adding new Operation Store methods related with the Store...
     }
 }

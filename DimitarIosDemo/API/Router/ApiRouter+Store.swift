@@ -17,6 +17,8 @@ extension ApiRouter {
         case getStores
         case getStoreById(Int)
         
+        //Adding new case requests related with the Store...
+        
         var path: String {
             switch self {
             case .getStores:

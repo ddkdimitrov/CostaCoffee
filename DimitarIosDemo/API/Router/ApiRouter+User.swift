@@ -17,6 +17,8 @@ extension ApiRouter {
         case login(data:Data)
         case updateUser([String:Any])
         
+        //Adding new case requests related with the User...
+        
         var path: String {
             switch self {
             case .login:

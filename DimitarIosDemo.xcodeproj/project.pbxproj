@@ -256,8 +256,8 @@
 				4F848D1728CAC74900EF1B4C /* Resources */,
 				4F95766E28C69C21008CC829 /* AppDelegate.swift */,
 				4F95767028C69C21008CC829 /* SceneDelegate.swift */,
-				4F95767928C69C23008CC829 /* LaunchScreen.storyboard */,
 				4F95767C28C69C23008CC829 /* Info.plist */,
+				4F95767928C69C23008CC829 /* LaunchScreen.storyboard */,
 			);
 			path = DimitarIosDemo;
 			sourceTree = "<group>";
