@@ -15,22 +15,8 @@ protocol Storyboarded {
 
 extension Storyboarded {
     func instantiateViewController(widhIdentifier identifier: String, withStoryboardName name:String) -> UIViewController {
-        
         var storyboard: UIStoryboard
-        
         storyboard = UIStoryboard(name: name, bundle: .main)
-        
         return storyboard.instantiateViewController(withIdentifier: identifier)
-       
-    }
-    
-    func instantiateTabBarController(widhIdentifier identifier: String, withStoryboardName name:String) -> UITabBarController {
-        
-        var storyboard: UIStoryboard
-        
-        storyboard = UIStoryboard(name: name, bundle: .main)
-        
-        return storyboard.instantiateViewController(withIdentifier: identifier) as! UITabBarController
-       
     }
 }

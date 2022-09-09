@@ -32,8 +32,6 @@ class LocationManager: NSObject {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
-        }else{
-            
         }
     }
     

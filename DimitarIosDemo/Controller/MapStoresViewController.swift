@@ -26,12 +26,16 @@ class MapStoresViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Stores locations"
+        
+        //Authorization
         locationManager.checkLocationService()
+        
+        //Set default city region
         let region = locationManager.centralViewBasedOnGivenLocation(latitude: mapStoresViewModel.defaultCenteredLocation.latitude,
                                                                      longitude: mapStoresViewModel.defaultCenteredLocation.longitude)
-        
         mapView.setRegion(region, animated: true)
         
+        //Adding Stores objects on the map
         if let stores = mapStoresViewModel.stores {
             createAnnotationsLocations(stores: stores)
         }
@@ -49,7 +53,7 @@ class MapStoresViewController: UIViewController {
 }
 
 
-
+//MARK: LocationManagerProtocol
 extension MapStoresViewController: LocationManagerProtocol {
     func didUpdateLocations(region: MKCoordinateRegion) {
         mapView.setRegion(region, animated: true)

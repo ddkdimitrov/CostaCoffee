@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextfield:UITextField!
     
     internal var loginViewModel:LoginViewModelProtocol!
-    
     internal var goToNextScreen: (() -> ())?
     
     override func viewDidLoad() {
@@ -30,6 +29,7 @@ class LoginViewController: UIViewController {
 }
 
 
+//MARK:Actions
 extension LoginViewController {
     @IBAction func tappedLoginButton(_ sender:Any){
         let email = emailTextfield.text

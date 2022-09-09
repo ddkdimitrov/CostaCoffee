@@ -34,7 +34,7 @@ class CitiesViewController: UIViewController {
 }
 
 
-
+//MARK: UITableViewDataSource
 extension CitiesViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -52,6 +52,7 @@ extension CitiesViewController: UITableViewDataSource {
 }
 
 
+//MARK: UITableViewDelegate
 extension CitiesViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectCell?(storesViewModel.cities[indexPath.row])
@@ -59,7 +60,7 @@ extension CitiesViewController : UITableViewDelegate {
 }
 
 
-
+//MARK: Setup
 extension CitiesViewController {
     private func setupTableView(){
         tableView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreTableViewCell")

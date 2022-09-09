@@ -22,7 +22,7 @@ class MainCoordinator:Coordinator, Storyboarded {
     
     
     init() {
-        self.rootViewController = self.instantiateTabBarController(widhIdentifier: "MainTabBarControllerID", withStoryboardName: "Main")
+        self.rootViewController = self.instantiateViewController(widhIdentifier: "MainTabBarControllerID", withStoryboardName: "Main") as? UITabBarController
     }
     
     func start() {
