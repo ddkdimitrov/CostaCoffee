@@ -36,10 +36,6 @@ class DimitarIosDemoTests: XCTestCase {
         let data = hashString.sha256()
         XCTAssertTrue(data == "140b1f280e13f9e199a4b00ae993a013595c13dd914eb0993071b2d4a1ca045f")
     }
-    
-    func test_user_validation(){
-        var user = User()
-        user.email = ""
-        user.password = ""
-    }
+
+    //In progress....
 }
