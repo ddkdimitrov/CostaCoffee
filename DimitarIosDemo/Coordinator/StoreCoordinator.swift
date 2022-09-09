@@ -20,7 +20,7 @@ class StoreCoordinator: Coordinator, Storyboarded {
     
     lazy var citiesViewController: UIViewController = {
         let vc = self.instantiateViewController(widhIdentifier: "CitiesViewControllerID", withStoryboardName: "Store") as! CitiesViewController
-        vc.storesViewModel = StoresViewModel(cities: [City]())
+        vc.citiesViewModel = CitiesViewModel(cities: [City]())
         vc.didSelectCell = { city in
             self.goToMapStoresViewController(city: city)
         }

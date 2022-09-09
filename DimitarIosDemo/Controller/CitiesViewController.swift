@@ -17,7 +17,7 @@ class CitiesViewController: UIViewController {
 
     @IBOutlet weak var tableView:UITableView!
     
-    internal var storesViewModel:StoresViewModelAbstractionProtocol!
+    internal var citiesViewModel:CitiesViewModelAbstractionProtocol!
     internal var didSelectCell:((City) -> ())?
     
     override func viewDidLoad() {
@@ -27,11 +27,12 @@ class CitiesViewController: UIViewController {
         setupTableView()
         
         Task{
-            await storesViewModel.getStores()
+            await citiesViewModel.getStores()
             tableView.reloadData()
         }
     }
 }
+
 
 
 //MARK: UITableViewDataSource
@@ -41,23 +42,25 @@ extension CitiesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.storesViewModel.cities.count
+        return citiesViewModel.cities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
-        cell.titleValue = storesViewModel.cities[indexPath.row].name
+        cell.titleValue = citiesViewModel.cities[indexPath.row].name
         return cell
     }
 }
 
 
+
 //MARK: UITableViewDelegate
 extension CitiesViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelectCell?(storesViewModel.cities[indexPath.row])
+        didSelectCell?(citiesViewModel.cities[indexPath.row])
     }
 }
+
 
 
 //MARK: Setup

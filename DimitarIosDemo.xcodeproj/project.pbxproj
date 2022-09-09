@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F76EEE628C9E62C0050E02F /* StoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76EEE528C9E62C0050E02F /* StoresViewModel.swift */; };
+		4F76EEE628C9E62C0050E02F /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76EEE528C9E62C0050E02F /* CitiesViewModel.swift */; };
 		4F76EEEA28C9EBE40050E02F /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76EEE828C9EBE40050E02F /* StoreTableViewCell.swift */; };
 		4F76EEEB28C9EBE40050E02F /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F76EEE928C9EBE40050E02F /* StoreTableViewCell.xib */; };
 		4F76EEED28C9EFF10050E02F /* MapStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76EEEC28C9EFF10050E02F /* MapStoresViewController.swift */; };
@@ -68,7 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F76EEE528C9E62C0050E02F /* StoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewModel.swift; sourceTree = "<group>"; };
+		4F76EEE528C9E62C0050E02F /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		4F76EEE828C9EBE40050E02F /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		4F76EEE928C9EBE40050E02F /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		4F76EEEC28C9EFF10050E02F /* MapStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStoresViewController.swift; sourceTree = "<group>"; };
@@ -163,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				4F7DF81728C74AFD00DC9910 /* LoginViewController.swift */,
-				4F9E1D9728C970CC00B75F32 /* MainTabBarController.swift */,
-				4F7DF82F28C75D1900DC9910 /* UserDetailViewController.swift */,
 				4F7DF83128C75D3600DC9910 /* CitiesViewController.swift */,
 				4F76EEEC28C9EFF10050E02F /* MapStoresViewController.swift */,
+				4F9E1D9728C970CC00B75F32 /* MainTabBarController.swift */,
+				4F7DF82F28C75D1900DC9910 /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				4F7DF81A28C74B2000DC9910 /* LoginViewModel.swift */,
-				4F76EEE528C9E62C0050E02F /* StoresViewModel.swift */,
+				4F76EEE528C9E62C0050E02F /* CitiesViewModel.swift */,
 				4F76EEF028C9F39D0050E02F /* MapStoresViewModel.swift */,
 			);
 			path = ViewModel;
@@ -192,13 +192,13 @@
 		4F7DF82428C7595700DC9910 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				4F7DF83728C7ACB200DC9910 /* Storyboarded.swift */,
-				4F7DF82528C7599D00DC9910 /* Coordinator.swift */,
 				4F7DF82728C75AB900DC9910 /* ApplicationCoordinator.swift */,
+				4F7DF83528C7A99700DC9910 /* LoginCoordinator.swift */,
 				4F7DF82928C75B7C00DC9910 /* MainCoordinator.swift */,
 				4F7DF82B28C75BC500DC9910 /* StoreCoordinator.swift */,
+				4F7DF82528C7599D00DC9910 /* Coordinator.swift */,
 				4F7DF82D28C75C6C00DC9910 /* UserCoordinator.swift */,
-				4F7DF83528C7A99700DC9910 /* LoginCoordinator.swift */,
+				4F7DF83728C7ACB200DC9910 /* Storyboarded.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -458,7 +458,7 @@
 				4F7DF82E28C75C6C00DC9910 /* UserCoordinator.swift in Sources */,
 				4F7DF83628C7A99700DC9910 /* LoginCoordinator.swift in Sources */,
 				4F7DF83428C780A400DC9910 /* ApiDataManager.swift in Sources */,
-				4F76EEE628C9E62C0050E02F /* StoresViewModel.swift in Sources */,
+				4F76EEE628C9E62C0050E02F /* CitiesViewModel.swift in Sources */,
 				4F7DF82328C74FF200DC9910 /* Extension+String.swift in Sources */,
 				4F9576B328C6BE85008CC829 /* City.swift in Sources */,
 				4F76EEEA28C9EBE40050E02F /* StoreTableViewCell.swift in Sources */,

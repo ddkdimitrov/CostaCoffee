@@ -12,6 +12,7 @@ import MapKit
  1. Using locationManager service for authorization and User location.
  2. Using MapKit for displaying the Stores objects into the Map and setting the initial regions.
  */
+
 class MapStoresViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -51,6 +52,7 @@ class MapStoresViewController: UIViewController {
         }
     }
 }
+
 
 
 //MARK: LocationManagerProtocol

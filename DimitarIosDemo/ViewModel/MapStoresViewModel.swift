@@ -9,7 +9,7 @@ import Foundation
 
 /*
  1. Preferable using the ViewModel protocol inside the same file to be more clear
- 2. With MapStoresViewModelProtocol im doing abstraction that helps to the client to know which basic methods should use.
+ 2. With MapStoriesViewModelProtocol im doing abstraction that helps to the client to know which basic methods should use.
  3. Making encapsulation of the others methods/properties that the client hasn`t have an access
  - In this demo  version point 3/2 are not too much requirement but the demo project is created by following the good practices
  commented by: Dimitar
