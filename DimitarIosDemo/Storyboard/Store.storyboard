@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stores-->
+        <scene sceneID="KaL-ZP-D37">
+            <objects>
+                <viewController storyboardIdentifier="CitiesViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sf8-9l-0Yv" customClass="CitiesViewController" customModule="DimitarIosDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FfB-Nz-u3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sXc-xe-fGa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sf8-9l-0Yv" id="g4r-hQ-yg4"/>
+                                    <outlet property="delegate" destination="sf8-9l-0Yv" id="dEy-EW-L04"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sI2-9M-4uV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sI2-9M-4uV" firstAttribute="trailing" secondItem="sXc-xe-fGa" secondAttribute="trailing" id="0ww-i5-mQD"/>
+                            <constraint firstItem="sXc-xe-fGa" firstAttribute="top" secondItem="sI2-9M-4uV" secondAttribute="top" id="aIv-ES-Z1q"/>
+                            <constraint firstItem="sI2-9M-4uV" firstAttribute="bottom" secondItem="sXc-xe-fGa" secondAttribute="bottom" id="uE0-4g-Zax"/>
+                            <constraint firstItem="sXc-xe-fGa" firstAttribute="leading" secondItem="sI2-9M-4uV" secondAttribute="leading" id="xpQ-J6-KYx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stores" image="square.and.arrow.up" catalog="system" id="1Gs-Ro-xdZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="sXc-xe-fGa" id="2OI-I4-fKe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3R-CD-I91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-190" y="-301"/>
+        </scene>
+        <!--Map Stores View Controller-->
+        <scene sceneID="Wny-le-mlu">
+            <objects>
+                <viewController storyboardIdentifier="MapStoresViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ija-NI-c0I" customClass="MapStoresViewController" customModule="DimitarIosDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Saj-wr-uTl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V1d-pp-Pff">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NQi-Me-4iu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V1d-pp-Pff" firstAttribute="leading" secondItem="NQi-Me-4iu" secondAttribute="leading" id="2iu-3E-Dos"/>
+                            <constraint firstAttribute="bottom" secondItem="V1d-pp-Pff" secondAttribute="bottom" id="9RY-CV-A8e"/>
+                            <constraint firstItem="NQi-Me-4iu" firstAttribute="trailing" secondItem="V1d-pp-Pff" secondAttribute="trailing" id="jz4-TT-NKL"/>
+                            <constraint firstItem="V1d-pp-Pff" firstAttribute="top" secondItem="Saj-wr-uTl" secondAttribute="top" id="x1K-dI-BhA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="V1d-pp-Pff" id="5Zf-BG-bTF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYa-i0-Ygw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="643" y="-301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

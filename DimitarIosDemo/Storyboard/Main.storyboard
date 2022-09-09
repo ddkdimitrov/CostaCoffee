@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User-->
+        <scene sceneID="SAr-bc-8p7">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wuz-sz-28o" customClass="UserDetailViewController" customModule="DimitarIosDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fd7-uc-vYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="71V-rt-5eK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User" image="square.and.arrow.up.circle" catalog="system" id="mSJ-h7-qfo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZD-9g-4Rz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="357"/>
+        </scene>
+        <!--CitiesViewControllerID-->
+        <scene sceneID="QQC-PC-4hm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Store" referencedIdentifier="CitiesViewControllerID" id="mo9-EP-y3w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hV2-Uj-RcM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Mi-a4-ZLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="-289"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="xCf-M7-mJI">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mK8-q7-CaP" customClass="MainTabBarController" customModule="DimitarIosDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Dq-oD-kxk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wuz-sz-28o" kind="relationship" relationship="viewControllers" id="6O2-Xs-Pia"/>
+                        <segue destination="mo9-EP-y3w" kind="relationship" relationship="viewControllers" id="KtL-GG-yYZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmN-tJ-Sjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1081" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
