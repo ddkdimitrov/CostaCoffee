@@ -23,11 +23,10 @@ class LoginViewModel : LoginViewModelProtocol {
     internal func login(email: String?, password: String?) async -> Bool {
         let user = User(email: email, password: password)
         if validateUserData(data: user) {
-            let hashString = email! + password! + "PizzaLab!OU1"
-            let generatedPassword = hashString.sha256()
+            let generatedPassword = (email! + password! + "PizzaLab!OU1").sha256()
             let user = User(loginType: "email", email: email, password: generatedPassword)
+            
             let inst = ApiClient.UserOperation.inst
-
             if let user = await inst.login(user: user), user.token != nil {
                 return true
             }
