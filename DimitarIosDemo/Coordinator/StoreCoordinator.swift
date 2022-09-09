@@ -16,8 +16,7 @@ import UIKit
  */
 class StoreCoordinator: Coordinator, Storyboarded {
     
-    var rootViewController: UINavigationController
-
+    internal var rootViewController: UINavigationController
     
     lazy var citiesViewController: UIViewController = {
         let vc = self.instantiateViewController(widhIdentifier: "CitiesViewControllerID", withStoryboardName: "Store") as! CitiesViewController
@@ -32,11 +31,12 @@ class StoreCoordinator: Coordinator, Storyboarded {
         rootViewController = UINavigationController()
     }
     
-    func start() {
+    
+    internal func start() {
         rootViewController.setViewControllers([citiesViewController], animated: false)
     }
     
-    func goToMapStoresViewController(city:City){
+    private func goToMapStoresViewController(city:City){
         let mapStoresViewController = self.instantiateViewController(widhIdentifier: "MapStoresViewControllerID", withStoryboardName: "Store") as! MapStoresViewController
         mapStoresViewController.locationManager = LocationManager()
         mapStoresViewController.mapStoresViewModel = MapStoresViewModel(city: city)

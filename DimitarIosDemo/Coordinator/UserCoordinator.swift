@@ -16,7 +16,7 @@ import UIKit
  */
 class UserCoordinator: Coordinator, Storyboarded {
     
-    var rootViewController: UINavigationController
+    internal var rootViewController: UINavigationController
     
     lazy var firstViewController: UIViewController = {
         let vc = self.instantiateViewController(widhIdentifier: "UserDetailViewControllerID", withStoryboardName: "Main")
@@ -27,7 +27,7 @@ class UserCoordinator: Coordinator, Storyboarded {
         rootViewController = UINavigationController()
     }
     
-    func start() {
+    internal func start() {
         rootViewController.setViewControllers([firstViewController], animated: false)
     }
 }

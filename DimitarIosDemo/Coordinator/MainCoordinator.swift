@@ -20,12 +20,11 @@ class MainCoordinator:Coordinator, Storyboarded {
     internal weak var rootViewController: UITabBarController?
     internal var childCoordinators = [Coordinator]()
     
-    
     init() {
         self.rootViewController = self.instantiateViewController(widhIdentifier: "MainTabBarControllerID", withStoryboardName: "Main") as? UITabBarController
     }
     
-    func start() {
+    internal func start() {
         //Tab 1
         let firstCoordinator = StoreCoordinator()
         firstCoordinator.start()

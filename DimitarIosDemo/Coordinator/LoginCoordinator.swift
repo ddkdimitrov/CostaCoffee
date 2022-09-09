@@ -16,7 +16,7 @@ import UIKit
  */
 class LoginCoordinator: Coordinator, Storyboarded {
     
-    var rootViewController: UIViewController?
+    internal var rootViewController: UIViewController?
     let window: UIWindow
 
     init(window:UIWindow){
@@ -24,7 +24,7 @@ class LoginCoordinator: Coordinator, Storyboarded {
         self.rootViewController = self.instantiateViewController(widhIdentifier: "LoginViewControllerID", withStoryboardName: "Login") as! LoginViewController
     }
     
-    func start() {
+    internal func start() {
         if let loginViewController = rootViewController as? LoginViewController {
             loginViewController.loginViewModel = LoginViewModel()
             loginViewController.goToNextScreen = {

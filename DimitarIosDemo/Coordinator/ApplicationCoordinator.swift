@@ -18,14 +18,14 @@ import UIKit
 class ApplicationCoordinator: Coordinator {
     
     let window: UIWindow
-    var isLogged:Bool
+    private var isLogged:Bool
 
     init(window: UIWindow, isLogged:Bool) {
         self.window = window
         self.isLogged = isLogged
     }
     
-    func start() {
+    internal func start() {
         if isLogged {
             let mainCoordinator = MainCoordinator()
             mainCoordinator.start()
