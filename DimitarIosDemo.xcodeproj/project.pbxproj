@@ -30,6 +30,7 @@
 		4F7DF83628C7A99700DC9910 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DF83528C7A99700DC9910 /* LoginCoordinator.swift */; };
 		4F7DF83828C7ACB200DC9910 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DF83728C7ACB200DC9910 /* Storyboarded.swift */; };
 		4F848D1428CA1F1D00EF1B4C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F848D1328CA1F1D00EF1B4C /* LocationManager.swift */; };
+		4F848D1628CAC3E700EF1B4C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F848D1528CAC3E700EF1B4C /* Account.swift */; };
 		4F95766F28C69C21008CC829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95766E28C69C21008CC829 /* AppDelegate.swift */; };
 		4F95767128C69C21008CC829 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95767028C69C21008CC829 /* SceneDelegate.swift */; };
 		4F95767828C69C23008CC829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F95767728C69C23008CC829 /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		4F7DF83528C7A99700DC9910 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		4F7DF83728C7ACB200DC9910 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		4F848D1328CA1F1D00EF1B4C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4F848D1528CAC3E700EF1B4C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		4F95766B28C69C21008CC829 /* DimitarIosDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DimitarIosDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F95766E28C69C21008CC829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F95767028C69C21008CC829 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		4F7DF82428C7595700DC9910 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				4F7DF83728C7ACB200DC9910 /* Storyboarded.swift */,
 				4F7DF82528C7599D00DC9910 /* Coordinator.swift */,
 				4F7DF82728C75AB900DC9910 /* ApplicationCoordinator.swift */,
 				4F7DF82928C75B7C00DC9910 /* MainCoordinator.swift */,
@@ -208,6 +211,15 @@
 				4F848D1328CA1F1D00EF1B4C /* LocationManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		4F848D1728CAC74900EF1B4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F95767C28C69C23008CC829 /* Info.plist */,
+				4F95767728C69C23008CC829 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4F95766228C69C21008CC829 = {
@@ -233,21 +245,19 @@
 		4F95766D28C69C21008CC829 /* DimitarIosDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4F848D1228CA1F1000EF1B4C /* Helper */,
-				4F76EEE728C9EBAC0050E02F /* Cells  */,
-				4F7DF82128C74FE400DC9910 /* Extension */,
 				4F95769E28C69CC3008CC829 /* API */,
+				4F7DF82128C74FE400DC9910 /* Extension */,
+				4F848D1228CA1F1000EF1B4C /* Helper */,
 				4F9576AD28C6AC3E008CC829 /* Model */,
 				4F7DF81928C74B0F00DC9910 /* ViewModel */,
 				4F7DF82428C7595700DC9910 /* Coordinator */,
 				4F7DF81628C74AD500DC9910 /* Controller */,
 				4F7DF80D28C74A4100DC9910 /* Storyboard */,
+				4F76EEE728C9EBAC0050E02F /* Cells  */,
+				4F848D1728CAC74900EF1B4C /* Resources */,
 				4F95766E28C69C21008CC829 /* AppDelegate.swift */,
 				4F95767028C69C21008CC829 /* SceneDelegate.swift */,
-				4F95767728C69C23008CC829 /* Assets.xcassets */,
 				4F95767928C69C23008CC829 /* LaunchScreen.storyboard */,
-				4F95767C28C69C23008CC829 /* Info.plist */,
-				4F7DF83728C7ACB200DC9910 /* Storyboarded.swift */,
 			);
 			path = DimitarIosDemo;
 			sourceTree = "<group>";
@@ -304,6 +314,7 @@
 				4F9576AE28C6AC54008CC829 /* Store.swift */,
 				4F9576B228C6BE85008CC829 /* City.swift */,
 				4F7DF81C28C74C5600DC9910 /* User.swift */,
+				4F848D1528CAC3E700EF1B4C /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +474,7 @@
 				4F9576B128C6AE15008CC829 /* ApiErrorManager.swift in Sources */,
 				4F7DF82C28C75BC500DC9910 /* StoreCoordinator.swift in Sources */,
 				4F76EEED28C9EFF10050E02F /* MapStoresViewController.swift in Sources */,
+				4F848D1628CAC3E700EF1B4C /* Account.swift in Sources */,
 				4F7DF82A28C75B7C00DC9910 /* MainCoordinator.swift in Sources */,
 				4F95766F28C69C21008CC829 /* AppDelegate.swift in Sources */,
 				4F7DF81828C74AFD00DC9910 /* LoginViewController.swift in Sources */,

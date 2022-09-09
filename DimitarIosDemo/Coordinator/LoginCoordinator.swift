@@ -27,7 +27,7 @@ class LoginCoordinator: Coordinator, Storyboarded {
     func start() {
         if let loginViewController = rootViewController as? LoginViewController {
             loginViewController.loginViewModel = LoginViewModel()
-            loginViewController.isUserLogged = {  isLogged in
+            loginViewController.goToNextScreen = {
                 let mainCoordinator = MainCoordinator()
                 mainCoordinator.start()
                 self.window.rootViewController = mainCoordinator.rootViewController

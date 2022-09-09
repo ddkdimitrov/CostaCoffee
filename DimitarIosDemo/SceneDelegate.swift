@@ -13,8 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
+            let isLogged = Account.isLogged
             let window = UIWindow(windowScene: windowScene)
-            let applicationCoordinator = ApplicationCoordinator(window: window, isLogged: false)
+            let applicationCoordinator = ApplicationCoordinator(window: window, isLogged: isLogged)
             applicationCoordinator.start()
             
             self.applicationCoordinator = applicationCoordinator

@@ -9,7 +9,7 @@ import UIKit
 
 /**
  1. Using 'isUserLogged' closure to notify the Coordinator for the redirecting
- 2. Using async/await helping me to prevent Nested methods call and getting the result without using closure.
+ 2. Using async/await helping me to prevent Nested methods (in that case we dont have nestes calls) call and getting the result without using closure.
  - commented by: Dimitar
  */
 class LoginViewController: UIViewController {
@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     internal var loginViewModel:LoginViewModelProtocol!
     
-    internal var isUserLogged: ((Bool) -> ())?
+    internal var goToNextScreen: (() -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,8 @@ extension LoginViewController {
         Task {
             let isLogged = await loginViewModel.login(email: email, password: password)
             if isLogged {
-                isUserLogged?(isLogged)
+                Account.isLogged = true
+                goToNextScreen?()
             }
         }
     }

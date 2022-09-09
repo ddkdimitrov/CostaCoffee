@@ -26,16 +26,19 @@ class MainCoordinator:Coordinator, Storyboarded {
     }
     
     func start() {
+        //Tab 1
         let firstCoordinator = StoreCoordinator()
         firstCoordinator.start()
         self.childCoordinators.append(firstCoordinator)
         let firstViewController = firstCoordinator.rootViewController
         
+        //Tab 2
         let secondCoordinator = UserCoordinator()
         secondCoordinator.start()
         self.childCoordinators.append(secondCoordinator)
         let secondViewController = secondCoordinator.rootViewController
         
+        //Setup Tab1 and Tab2 VC to the TabBarController
         self.rootViewController?.viewControllers = [firstViewController, secondViewController]
     }
 }

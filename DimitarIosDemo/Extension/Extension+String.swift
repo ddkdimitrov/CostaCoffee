@@ -25,7 +25,7 @@ extension String {
     }
     
     public func isEmpty() -> Bool {
-        if self.trimmingCharacters(in: .whitespacesAndNewlines) ==  "" {
+        if self.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return true
         }
         return false

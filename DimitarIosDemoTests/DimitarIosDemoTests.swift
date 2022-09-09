@@ -8,6 +8,10 @@
 import XCTest
 @testable import DimitarIosDemo
 
+/**
+ 1. Have to check how can I test private methos in the ViewModels cus Im using Private for making encapsulation. One of the variants is exporting the methods out in a helper validation class.
+ 
+ */
 class DimitarIosDemoTests: XCTestCase {
     
     var loginViewModel:LoginViewModel!
