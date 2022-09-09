@@ -23,15 +23,15 @@ class CitiesViewModel: CitiesViewModelAbstractionProtocol {
     
     var cities:[City]
     var apiErrorHandler: ((ApiErrorManager.Errors) -> ())?
+    private let storesApiInst = ApiClient.StoreOperation.inst
     
     init(cities:[City]) {
         self.cities = cities
     }
     
     internal func getStores() async {
-        let inst = ApiClient.StoreOperation.inst
         do {
-            let cities = try await inst.getStoresByCities()
+            let cities = try await storesApiInst.getStoresByCities()
             self.cities = cities
             
         }catch (let apiError){

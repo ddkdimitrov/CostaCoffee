@@ -20,14 +20,14 @@ protocol LoginViewModelProtocol {
 
 class LoginViewModel : LoginViewModelProtocol {
     
+    private let userApiInst = ApiClient.UserOperation.inst
+    
     internal func login(email: String?, password: String?) async -> Bool {
-        let user = User(email: email, password: password)
-        if validateUserData(data: user) {
-            let generatedPassword = (email! + password! + "PizzaLab!OU1").sha256()
-            let user = User(loginType: "email", email: email, password: generatedPassword)
+        if validateUserData(email: email, password: password) {
+            let generatedSha256Password = (email! + password! + "PizzaLab!OU1").sha256()
+            let user = User(loginType: "email", email: email, password: generatedSha256Password)
             
-            let inst = ApiClient.UserOperation.inst
-            if let user = await inst.login(user: user), user.token != nil {
+            if let user = await userApiInst.login(user: user), user.token != nil {
                 return true
             }
         }
@@ -35,9 +35,10 @@ class LoginViewModel : LoginViewModelProtocol {
         return false
     }
     
-    private func validateUserData(data:User) -> Bool {
-        guard let email = data.email,
-              let password = data.password else {
+    
+    private func validateUserData(email:String?, password:String?) -> Bool {
+        guard let email = email,
+              let password = password else {
               return false
         }
         
