@@ -42,6 +42,7 @@ extension ApiRouter {
         }
         
         func makeFullRequest() -> URLRequest {
+            //We can add new options in the request based on our needs and switch case
             return self.request
         }
     }

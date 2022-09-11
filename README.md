@@ -2,6 +2,8 @@
 Basic demo project
 
 Public access to the project -> https://github.com/ddkdimitrov/CostaCoffee
+The projects has been created without the need to be installed 3th party libraries.
+
 
 Goals:
 
@@ -43,7 +45,7 @@ NOTES:
 1. I could extend the project more by using some Setup classes for styling the CSS of the app, texts and t.n.t
 2. I could make different Targets based on the API Version if we have Development/Production environment. 
 3. I could use open-closed solid principle to the classes that can be extendable in the future with a new futures. 
-4. I used mostly Singleton in the API client/error/decode managers but could use and Dependancy Injection instead a Singleton. Everything depends on the programmer style of coding too :) 
+4. I used mostly Singleton in the API client/error/decode managers but could use and Dependancy Injection instead a Singleton and Open/Closed solid principle for creating and extending API/Error class Managers. 
 5. The project could extended with DispatchGroup/QueuOperations (if we dont use Reactive) in a late version if we have more complexity in the processes or to use reactive programming to simplify and manage multithearding. 
 6. I could make the process even more complex if I had a lot of data in one ViewController, making everything more complex and separating one screen to many viewcontrollers using the same conceptions like MVC/MVVM/MVVM+C. Mainly said when we have multiple separation of one screen(to many view controllers), even MVC is enough if we are working with that pattern correctly!!! 
 

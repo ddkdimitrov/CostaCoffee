@@ -31,7 +31,6 @@ class StoreCoordinator: Coordinator, Storyboarded {
         rootViewController = UINavigationController()
     }
     
-    
     internal func start() {
         rootViewController.setViewControllers([citiesViewController], animated: false)
     }

@@ -20,6 +20,8 @@ class CitiesViewController: UIViewController {
     internal var citiesViewModel:CitiesViewModelAbstractionProtocol!
     internal var didSelectCell:((City) -> ())?
     
+    private var storeTableViewCellName = "StoreTableViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,7 +48,7 @@ extension CitiesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: storeTableViewCellName, for: indexPath) as! StoreTableViewCell
         cell.titleValue = citiesViewModel.cities[indexPath.row].name
         return cell
     }
@@ -66,7 +68,7 @@ extension CitiesViewController : UITableViewDelegate {
 //MARK: Setup
 extension CitiesViewController {
     private func setupTableView(){
-        tableView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreTableViewCell")
+        tableView.register(UINib(nibName: storeTableViewCellName, bundle: nil), forCellReuseIdentifier: storeTableViewCellName)
         tableView.tableFooterView = UIView()
     }
 }

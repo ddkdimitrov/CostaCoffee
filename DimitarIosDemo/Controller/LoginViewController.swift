@@ -20,6 +20,12 @@ class LoginViewController: UIViewController {
     internal var loginViewModel:LoginViewModelProtocol!
     internal var goToNextScreen: (() -> ())?
     
+}
+
+
+
+//MARK: Life cycle methods
+extension LoginViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 

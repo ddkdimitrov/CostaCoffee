@@ -25,7 +25,12 @@ class UserDetailViewController: UIViewController {
         lbl.text = "Module in progress..."
         return lbl
     }()
-    
+}
+
+
+
+//MARK: Life cycle methods
+extension UserDetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +38,4 @@ class UserDetailViewController: UIViewController {
         view.addSubview(centralLabel)
         // Do any additional setup after loading the view.
     }
-
-
 }
